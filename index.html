@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Life Pharmacy - Online Pharmacy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <i class="fa-solid fa-phone me-2"></i> +94 11 234 5678
+                <span class="mx-3">|</span>
+                <i class="fa-solid fa-envelope me-2"></i> info@bestlifepharmacy.lk
+            </div>
+            <div>
+                <a href="contact.html" class="me-3">Order Tracking</a>
+                <a href="#">About Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.png" alt="Best Life Pharmacy Logo" onerror="this.src='https://via.placeholder.com/150x50?text=Pharmacy+Logo';">
+                <span class="ms-2 fw-bold text-primary-custom fs-4">Best Life Pharmacy</span>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <!-- Search Bar (Center) -->
+                <form class="search-form mx-auto my-3 my-lg-0">
+                    <input type="text" class="form-control" placeholder="Search for medicine, brands...">
+                    <button type="submit" class="btn-search"><i class="fa-solid fa-search"></i></button>
+                </form>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="shop.html">Ayurvedic Care</a></li>
+                            <li><a class="dropdown-item" href="shop.html">Baby Care</a></li>
+                            <li><a class="dropdown-item" href="shop.html">Diabetes Care</a></li>
+                            <li><a class="dropdown-item" href="shop.html">Personal Care</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+
+                <!-- Action Icons -->
+                <div class="nav-actions">
+                    <a href="#" class="btn btn-primary-custom me-3" data-bs-toggle="modal" data-bs-target="#prescriptionModal">
+                        <i class="fa-solid fa-upload me-2"></i> Upload Prescription
+                    </a>
+                    <a href="#" class="action-icon d-none d-lg-block" title="User Account" id="user-btn">
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+                    <a href="#" class="action-icon position-relative" title="Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative z-2">
+            <div class="row">
+                <div class="col-lg-7 py-5">
+                    <span class="badge bg-primary-custom mb-3 px-3 py-2 rounded-pill">Total Healthcare Provider</span>
+                    <h1 class="hero-title">Your Health, <br><span>Delivered to Your Door.</span></h1>
+                    <p class="hero-subtitle">Pioneering Sri Lanka's pharmacy network, delivering excellence in healthcare solutions straight to your home.</p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <button class="btn btn-primary-custom btn-lg w-auto" data-bs-toggle="modal" data-bs-target="#prescriptionModal">
+                            Upload Prescription <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </button>
+                        <a href="shop.html" class="btn btn-outline-custom btn-lg bg-white w-auto">
+                            Shop Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-5 bg-white border-bottom">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-truck-fast benefit-icon text-primary-custom"></i>
+                        <div class="benefit-text">
+                            <h5>Islandwide Delivery</h5>
+                            <p>Fast and secure shipping</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-user-doctor benefit-icon text-primary-custom"></i>
+                        <div class="benefit-text">
+                            <h5>Expert Pharmacists</h5>
+                            <p>24/7 Professional consultation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-shield-halved benefit-icon text-primary-custom"></i>
+                        <div class="benefit-text">
+                            <h5>100% Genuine</h5>
+                            <p>Authentic healthcare products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Category -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Shop by Category</h2>
+                <div class="mx-auto mt-2" style="width: 60px; height: 3px; background: var(--primary-color);"></div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="shop.html" class="category-card">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-leaf"></i></div>
+                        <div class="category-title">Ayurvedic Care</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="shop.html" class="category-card">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-baby"></i></div>
+                        <div class="category-title">Baby Care</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="shop.html" class="category-card">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+                        <div class="category-title">Blood Pressure</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="shop.html" class="category-card">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-tooth"></i></div>
+                        <div class="category-title">Dental Care</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="shop.html" class="category-card">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-syringe"></i></div>
+                        <div class="category-title">Diabetes Care</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="shop.html" class="category-card">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-stethoscope"></i></div>
+                        <div class="category-title">Doctors Eqp.</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="shop.html" class="category-card">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-kit-medical"></i></div>
+                        <div class="category-title">First Aid</div>
+                    </a>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a href="shop.html" class="category-card">
+                        <div class="cat-icon-wrap"><i class="fa-solid fa-capsules"></i></div>
+                        <div class="category-title">Vitamins</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Carousel -->
+    <section class="py-5 bg-white border-top border-bottom">
+        <div class="container">
+            <h4 class="text-center mb-4 text-muted fw-bold">Collaborated Brands</h4>
+            <div class="row g-3 justify-content-center">
+                <div class="col-4 col-md-2">
+                    <div class="brand-wrap">Rossmax</div>
+                </div>
+                <div class="col-4 col-md-2">
+                    <div class="brand-wrap">Nature's Way</div>
+                </div>
+                <div class="col-4 col-md-2">
+                    <div class="brand-wrap">Littmann</div>
+                </div>
+                <div class="col-4 col-md-2">
+                    <div class="brand-wrap">Mesoestetic</div>
+                </div>
+                <div class="col-4 col-md-2">
+                    <div class="brand-wrap">Genove</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="d-flex align-items-center mb-3 text-decoration-none" href="#">
+                        <img src="assets/images/logo.png" alt="Best Life Pharmacy" height="40" onerror="this.src='https://via.placeholder.com/40x40/fff/0d9488?text=UC';">
+                        <span class="ms-2 fw-bold text-white fs-4">Best Life Pharmacy</span>
+                    </a>
+                    <p class="text-muted pe-4">Pioneering Sri Lanka's pharmacy network, delivering excellence in total healthcare solutions to the community.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Categories</h5>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">Ayurvedic Care</a></li>
+                        <li><a href="shop.html">Personal Care</a></li>
+                        <li><a href="shop.html">Vitamins & Supplements</a></li>
+                        <li><a href="shop.html">Medical Devices</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Contact Info</h5>
+                    <p class="mb-2"><i class="fa-solid fa-location-dot me-2 text-primary-custom"></i> 123 Health Ave, Colombo</p>
+                    <p class="mb-2"><i class="fa-solid fa-phone me-2 text-primary-custom"></i> +94 11 234 5678</p>
+                    <p class="mb-2"><i class="fa-solid fa-envelope me-2 text-primary-custom"></i> info@bestlifepharmacy.lk</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="mb-0 text-muted">&copy; 2026 Best Life Pharmacy. All Rights Reserved.</p>
+                <div class="social-icons d-flex">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Upload Prescription Modal -->
+    <div class="modal fade" id="prescriptionModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary-custom text-white border-0">
+                    <h5 class="modal-title fw-bold"><i class="fa-solid fa-file-medical me-2"></i> Upload Prescription</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted text-center mb-4">Please upload a clear image or PDF of your prescription. Our pharmacists will review it.</p>
+                    <div class="upload-area mb-3" id="uploadArea">
+                        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                        <h5 class="mt-2">Drag & Drop</h5>
+                        <p class="text-muted mb-0">or click to browse your files</p>
+                        <input type="file" id="prescriptionFile" class="d-none" accept="image/*, .pdf">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Additional Notes</label>
+                        <textarea class="form-control" rows="2" placeholder="Any specific instructions..."></textarea>
+                    </div>
+                    <button class="btn btn-primary-custom w-100 py-2">Submit Prescription</button>
+                    <div class="text-center mt-3 mb-2"><span class="text-muted small">Or</span></div>
+                    <a href="https://wa.me/94711084918" target="_blank" class="btn btn-success w-100 py-2"><i class="fa-brands fa-whatsapp me-2 fs-5"></i> WhatsApp Us (0711084918)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 400px;">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary-custom text-white border-0">
+                    <h5 class="modal-title fw-bold" id="authTitle">Sign In</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="authForm">
+                        <div class="mb-3">
+                            <label class="form-label text-muted">Email address</label>
+                            <input type="email" class="form-control" id="authEmail" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label text-muted">Password</label>
+                            <input type="password" class="form-control" id="authPassword" required minlength="6">
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 py-2" id="authSubmitBtn">Login</button>
+                        <div class="text-center mt-3">
+                            <a href="#" id="toggleAuthMode" class="text-decoration-none text-muted">Don't have an account? <b>Sign Up</b></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
